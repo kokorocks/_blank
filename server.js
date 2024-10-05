@@ -6,3 +6,8 @@ const peers = new Peer();
 peer.on('open', (id) => {
     console.log(`My peer ID is: ${id}`);
 });
+peer.on('connection', (connection) => {
+    conn = connection;
+    conn.on('data', (data) => {null
+    });
+});
